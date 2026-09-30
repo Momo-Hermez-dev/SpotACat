@@ -68,6 +68,10 @@ Allow only JPEG, PNG, and WebP after checking file signature, not merely extensi
 
 Use separate Supabase and Vercel environment values for development, preview, and production. Only `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, and explicitly public map configuration belong in browser-exposed variables. Service-role, webhook, image-processing, and integration secrets are server-only.
 
+## Mobile and responsive privacy considerations
+
+Responsive layouts must not reveal sensitive locations through accidental overflow, screenshots, or touch-only affordances. Exact coordinates remain server-side regardless of viewport. Bottom sheets and full-screen mobile panels must trap or clearly manage focus when implemented, support Escape where applicable, and keep report/redaction actions reachable above browser safe areas. Camera uploads must use the same validation and EXIF stripping pipeline on mobile as on desktop.
+
 ## Security acceptance criteria before launch
 
 - RLS tests prove cross-user reads/writes fail.

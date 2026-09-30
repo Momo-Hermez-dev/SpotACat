@@ -8,7 +8,7 @@
 
 **Dependencies:** Existing Next.js/TypeScript stack.
 
-**Acceptance criteria:** Separate `Cat`/`CatSighting` contracts exist; map/detail/spotting components accept typed props; mock data implements the contracts; privacy and draft validation have unit coverage; `npm run build` remains green.
+**Acceptance criteria:** Separate `Cat`/`CatSighting` contracts exist; map/detail/spotting components accept typed props; mock data implements the contracts; privacy and draft validation have unit coverage; responsive QA covers the documented viewport/browser matrix; `npm run build` remains green.
 
 **Risks:** Over-splitting a small prototype or accidentally redesigning the UI. Keep this phase behavior-preserving.
 
@@ -56,7 +56,7 @@
 
 **Dependencies:** Privacy-safe public coordinate contract from Phase 3 and provider/style selection.
 
-**Acceptance criteria:** Markers, clustering, selection, viewport changes, attribution, and mobile performance work; map tokens are public-only; no exact location is rendered.
+**Acceptance criteria:** Markers, clustering, selection, viewport changes, attribution, and mobile performance work; map tokens are public-only; no exact location is rendered; phone portrait/landscape and tablet/desktop layouts pass responsive QA without overflow.
 
 **Risks:** Tile cost, token restrictions, hydration, marker performance, and accessibility.
 

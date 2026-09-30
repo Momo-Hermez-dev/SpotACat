@@ -42,6 +42,12 @@ The current feature map is:
 
 There are no shared components, utilities, hooks, state stores, data-access modules, tests, or generated API clients yet.
 
+## Responsive architecture requirement
+
+Responsiveness is a first-class product constraint, not a finishing pass. The map remains the primary surface on phones, with thumb-friendly floating controls and a bottom-sheet detail panel; tablets may overlay detail content; laptops and desktops use a navigation rail with a constrained detail panel. Layouts are content-driven and must avoid horizontal overflow from 320px through wide desktop. All controls use keyboard-visible focus, touch targets of at least 44px, safe-area padding where controls meet viewport edges, semantic labels, and reduced-motion fallbacks. Images use stable aspect ratios and `object-fit` so cat photography never changes layout unexpectedly.
+
+The responsive QA matrix and browser coverage are maintained in `docs/RESPONSIVE.md`. Backend work must preserve these interaction contracts when replacing mocked data.
+
 ## Frontend architecture assessment
 
 The prototype is appropriate as a visual baseline and is intentionally simple. A backend can be added incrementally, but the current single-file client boundary should not become the production architecture.
